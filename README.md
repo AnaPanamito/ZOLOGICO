@@ -8,6 +8,8 @@ Integrantes del grupo
 - Jessica Rivas
 - Ana Panamito
 
-![image](https://github.com/user-attachments/assets/04af5213-6467-41af-bc65-13fabbc9f70b)
+![image](https://github.com/user-attachments/assets/933e2537-6ae8-49f0-8d3b-d4dd70af4e3c) 
+
+
 
 
