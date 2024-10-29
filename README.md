@@ -1,3 +1,3 @@
-# ZOLOGICO
+# ZOOLOGICO
 
 Integrantes del grupo 
