@@ -6,7 +6,7 @@ Integrantes del grupo
 - Yober Gaona
 - Daniel Saabedra
 - Jessica Rivas
-- Ana Panamito
+
   
 
 
