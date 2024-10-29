@@ -3,7 +3,6 @@
 Integrantes del grupo 
 
 - Anthony Yaguana
-
 - Yober Gaona
 
 - Daniel Saabedra
