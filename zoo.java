@@ -1,23 +1,25 @@
-public class zoo {
-    //attributes
-    public String nombre;
-    public String horario;
-    public String direccion;
-    public String telefono;
-    public int capacidadMax;
+import java.util.ArrayList;
+import java.util.List;
 
-
-    //operations
-    boolean estaAbierto;
-
-    public zoo (boolean estaAbierto){
-        this.estaAbierto = estaAbierto;
-        if (estaAbierto == true){
-            System.out.print("El zoologico esta abierto :)\n");
+public class Zoologico {
+    private String nombre;
+    private String horario;
+    private int capacidadMaxima;
+    private List<Animal> animales;
+    public Zoologico(String nombre, String horario, int capacidadMaxima) {
+        this.nombre = nombre;
+        this.horario = horario;
+        this.capacidadMaxima = capacidadMaxima;
+        this.animales = new ArrayList<>();
+    }
+    public boolean registrarAnimal(Animal animal) {
+        if (animales.size()< capacidadMaxima) {
+            animales.add(animal);
+            System.out.println(animal.getNombre() + " Se ha registrado con exito a su nueva jaula.");
+            return true;
         }else {
-            System.out.print("El zoo esta cerrado :(\n");
-            System.exit(0);
+            System.out.println("Capacidad Maxima alcanzada");
+            return false;
         }
     }
-
 }
