@@ -1,28 +1,51 @@
 public class Persona {
-    //attributes
-    private int edad;
-    public String nombre;
-    public String apellido;
-    public String CI;
-    public String telefono;
-    public String rol;
+    protected String nombre;
+    protected String cedula;
+    protected String telefono;
 
-
-    //get
-    public Persona (String rol, String nombre, int edad, String telefono){
-        this.rol = rol;
+    public Persona(String nombre, String cedula, String telefono) {
         this.nombre = nombre;
-        this.edad = edad;
+        this.cedula = cedula;
         this.telefono = telefono;
+    }
 
-    };
+}
 
+class Cuidador extends Persona {
+    public Cuidador(String nombre, String cedula, String telefono) {
+        super(nombre, cedula, telefono);
+    }
 
-    public void mostrarInfo(){
-        System.out.print("\nRol: " + rol + "\nNombre:\t\t" + nombre + "\nEdad:\t\t" + edad + "\nContacto:\t" + telefono);
-    };
+    public void alimentar(Animal animal) {
+        System.out.println(" El cuidador Carlos esta alimentando a " + animal.getNombre());
+    }
 
+    public void limpiarJaula(Jaula jaula) {
+        jaula.limpiarJaula();
+    }
+}
 
+class Veterinario extends Persona {
+    private String especialidad;
 
+    public Veterinario(String nombre, String cedula, String telefono, String especialidad) {
+        super(nombre, cedula, telefono);
+        this.especialidad = especialidad;
+    }
 
+    public void realizarChequeo(Animal animal) {
+        System.out.println("El veterinario esta chequeando a " + animal.getNombre());
+    }
+
+    public void prescribirTratamiento(HistorialSalud historial, String tratamiento) {
+        historial.registrarTratamiento(tratamiento);
+        System.out.println("Se ha prescrito tratamiento: " + tratamiento);
+    }
+}
+class cliente extends Persona {
+    public cliente(String nombre, String cedula, String telefono) {
+        super(nombre, cedula, telefono);
+    }
+    public void entradasAdquiridas() {
+    }
 }
